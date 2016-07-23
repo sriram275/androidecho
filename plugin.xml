@@ -5,16 +5,12 @@
 
   <name>Hello</name>
 
-  <engines>
-    <engine name="cordova" version=">=3.4.0"/>
-  </engines>
-
-  <js-module src="www/hello.js" name="hello">
+  <platform name="android">
+    <js-module src="www/hello.js" name="hello">
+        <runs />
     <clobbers target="hello" />
   </js-module>
-
-  <platform name="android">
-
+      
     <config-file target="config.xml" parent="/*">
       <feature name="Hello">
         <param name="android-package" value="org.apache.cordova.plugin.Hello"/>
