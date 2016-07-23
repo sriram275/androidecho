@@ -53,7 +53,7 @@ public class Hello extends CordovaPlugin {
     private String pname = "";
     private String versionName = "";
     private int versionCode = 0;
-    private Drawable icon;
+   // private Drawable icon;
 }
 
 //private ArrayList<PInfo> getPackages() {
@@ -74,7 +74,7 @@ private ArrayList<PInfo> getInstalledApps(boolean getSysPackages) {
         newInfo.pname = p.packageName;
         newInfo.versionName = p.versionName;
         newInfo.versionCode = p.versionCode;
-        newInfo.icon = p.applicationInfo.loadIcon(getPackageManager());
+       // newInfo.icon = p.applicationInfo.loadIcon(getPackageManager());
         res.add(newInfo);
     }
     return res; 
