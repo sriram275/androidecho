@@ -62,15 +62,18 @@ public class Hello extends CordovaPlugin {
 //}
 
 private ArrayList<PInfo> getInstalledApps(boolean getSysPackages) {
-    ArrayList<PInfo> res = new ArrayList<PInfo>();        
-    List<PackageInfo> packs = getPackageManager().getInstalledPackages(0);
+    ArrayList<PInfo> res = new ArrayList<PInfo>(); 
+    String packageName = this.cordova.getActivity().getPackageName();
+    PackageManager pm = this.cordova.getActivity().getPackageManager();
+    PackageInfo packageInfo = pm.getPackageInfo(packageName, 0);
+    List<PackageInfo> packs = PackageManager.getInstalledPackages(0);
     for(int i=0;i<packs.size();i++) {
         PackageInfo p = packs.get(i);
         if ((!getSysPackages) && (p.versionName == null)) {
             continue ;
         }
         PInfo newInfo = new PInfo();
-        newInfo.appname = p.applicationInfo.loadLabel(getPackageManager()).toString();
+        newInfo.appname = p.applicationInfo.loadLabel(PackageManager).toString();
         newInfo.pname = p.packageName;
         newInfo.versionName = p.versionName;
         newInfo.versionCode = p.versionCode;
