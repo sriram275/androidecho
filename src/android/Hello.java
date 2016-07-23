@@ -12,7 +12,7 @@ public class Echo extends CordovaPlugin {
         if (action.equals("show")) {
 
             String name = data.getString(0);
-            String message = "Hello, " + name;
+            String message = "Testing..Hello, " + name;
             callbackContext.success(message);
 
             return true;
