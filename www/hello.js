@@ -10,7 +10,7 @@ var Echo = function() {
 };
 
 Echo.show = function(name,successCallback,errorCallback) {
-    exec(successCallback, errorCallback, "Echo", "show", [name]);
+    exec(successCallback, errorCallback, "Hello", "show", [name]);
 };
 
 /*
