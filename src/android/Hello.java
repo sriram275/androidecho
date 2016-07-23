@@ -3,6 +3,10 @@ package org.apache.cordova.plugin;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+
 import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
