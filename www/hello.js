@@ -1,4 +1,4 @@
-cordova.define("org.apache.cordova.plugin.Hello", function(require, exports, module) {
+cordova.define("com.example.hello.hello", function(require, exports, module) {
 
 //var argscheck = require('cordova/argscheck'),
 //    utils = require('cordova/utils'),
