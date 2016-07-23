@@ -1,5 +1,8 @@
 package org.apache.cordova.plugin;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
